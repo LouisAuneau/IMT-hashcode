@@ -6,7 +6,8 @@
     "node": ">= 6.0.0"
   },
   "dependencies": {
-    "request": "2.88.0",
-    "lodash": "4.17.11"
+    "genetic-js": "^0.1.14",
+    "lodash": "4.17.11",
+    "request": "2.88.0"
   }
 }
