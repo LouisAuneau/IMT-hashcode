@@ -3,7 +3,7 @@ var Genetic = require('genetic-js')
 
 helpers = require('./helpers.js')
 
-const USERNAME = "JE_CHANGE_MON_NOM";
+const USERNAME = "TEAM BBQ";
 
 var problems = {
     problem0: {
