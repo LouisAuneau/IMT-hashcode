@@ -48,9 +48,20 @@ var solveDumb = function (problem) {
         return slide.type === 'H';
     });
 
+    var slidesV = _.filter(problem.slides, function (slide) {
+        return slide.type === 'V';
+    });
+
     _.each(slidesH, function (slide, key) {
         solution.slides.push(slide.id);
-    })
+    });
+
+    for(let i = 0; i < slidesV.length - 1; i+=2) {
+        let concatedId = slidesV[i].id + " " + slidesV[i+1].id;
+        //console.log(concatedId)
+        solution.slides.push(concatedId);
+    }
+
     return solution;
 };
 
@@ -58,4 +69,4 @@ var solution = solveDumb(problems.problem3);
 
 var score = helpers.evaluateSolution(problems.problem3, solution);
 console.log("SCORE : " + score);
-helpers.send_solution(solution);
+//helpers.send_solution(solution);
